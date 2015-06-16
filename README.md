@@ -22,6 +22,18 @@ I strongly recommend using BoB with a *random data generation tool* such as [Fak
 
 Though it can be hard to mantain all generators updated all the time, they show their real potential while you get them the knowledge to build full instances of your models. **BoB uses real ActiveRecord instances of your models** so you can get everything from your *custom validations* to *any internal logic and methods you might need to use*.
 
+## Installation
+
+Get it with:
+
+```ruby
+gem 'bob-builder'
+```
+or:
+```ruby
+gem install bob-builder
+```
+
 ## Usage
 
 BoB starts with a simple interface, so you can tell it how to build instances for your models with:
