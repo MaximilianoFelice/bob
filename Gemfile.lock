@@ -34,6 +34,7 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
+    awesome_print (1.6.1)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
@@ -46,6 +47,8 @@ GEM
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
     erubis (2.7.0)
+    faker (1.4.3)
+      i18n (~> 0.5)
     i18n (0.7.0)
     json (1.8.3)
     mail (2.6.3)
@@ -102,7 +105,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_print
   bob!
+  faker
   pg
   pry
   pry-byebug

@@ -13,11 +13,15 @@ gemspec
 
 gem 'pg'
 
-group :developmen do
+group :development, :test do
   gem 'pry'
   gem 'pry-rails'
   gem 'pry-byebug' unless Gem.win_platform?
   gem 'pry-stack_explorer'
+
+  gem 'awesome_print'                # Better console printing
+
+  gem 'faker'
 
   # To use debugger
   #gem 'debugger'

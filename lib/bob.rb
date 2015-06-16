@@ -1,5 +1,5 @@
 require 'bob/builder'
-require 'bob/meta_builder'
 
 module Bob
+  include Builder
 end

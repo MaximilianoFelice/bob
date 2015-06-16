@@ -69,4 +69,14 @@ class Meta_Builder
       (res.length > 1)? res : res.first
     end
   end
+
+  def execute *args, &block
+    hash = args.first.to_h
+    hash[:log_with] ||= ->(msg){puts msg}
+    @behaviour.call *[hash], &block
+  end
+
+  def get_all_builders
+    [self, *((@after_callbacks || []).flat_map(&:get_all_builders))]
+  end
 end
