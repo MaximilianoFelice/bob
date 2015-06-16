@@ -7,7 +7,16 @@ class UserBuilder < Bob::Builder
   meta_build :customUser, User do |user, save, params|
     user.name = params[:name]
     user.email = params[:email]
-    
+
     user.save! if save
   end    
+
+  meta_build :forEachUser, User do |user|
+    user.name = Faker::Name.first_name
+    user.email = Faker::Internet.email
+  end
+
+  for_each :forEachUser do |user|
+    user.avatar = Faker::Avatar.image
+  end
 end

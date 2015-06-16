@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class BobTest < ActiveSupport::TestCase
+class MetaBuildTest < ActiveSupport::TestCase
   
   test "building single instance" do
     user = UserBuilder.user!
