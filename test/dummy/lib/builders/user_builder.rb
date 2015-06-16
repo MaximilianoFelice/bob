@@ -19,4 +19,9 @@ class UserBuilder < Bob::Builder
   for_each :forEachUser do |user|
     user.avatar = Faker::Avatar.image
   end
+
+  for_each :forEachUser, build: Comment, qty: 20 do |user, comment|
+    comment.user = user
+    comment.description = Faker::Lorem.paragraph
+  end
 end
