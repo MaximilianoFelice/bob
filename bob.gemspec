@@ -7,11 +7,11 @@ require "bob/version"
 Gem::Specification.new do |s|
   s.name        = "bob"
   s.version     = Bob::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Bob."
-  s.description = "TODO: Description of Bob."
+  s.authors     = ["Maximiliano Felice"]
+  s.email       = ["maximilianofelice@gmail.com"]
+  s.homepage    = "https://github.com/MaximilianoFelice/bob"
+  s.summary     = "Bob is a Builder Rails tool for generating data."
+  s.description = "Bob helps you generate a complex, robust data layer for getting you rails application fully populated."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
@@ -19,5 +19,4 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 4.1.5"
 
-  s.add_development_dependency "sqlite3"
 end
