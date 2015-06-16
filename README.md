@@ -20,7 +20,7 @@ I strongly recommend using BoB with a *random data generation tool* such as [Fak
 
 #### Fully generated data
 
-Though it can be hard to mantain all generators updated all the time, they show their real potential while you get them the knowledge to build full instances of your models. **BoB uses real ActiveRecord instances of your models** so you can get everithing from your *custom validations* to *any internal logic and methods you might need to use*.
+Though it can be hard to mantain all generators updated all the time, they show their real potential while you get them the knowledge to build full instances of your models. **BoB uses real ActiveRecord instances of your models** so you can get everything from your *custom validations* to *any internal logic and methods you might need to use*.
 
 ## Usage
 
