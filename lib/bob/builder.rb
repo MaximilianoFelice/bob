@@ -8,15 +8,15 @@ module Builder
     end
 
     def self.respond_to? sym, *args
-      sym.to_s =~ /([a-z]+\??=?)(!?)$/ || super
+      sym.to_s =~ /^([A-Za-z]+\??=?)(!?)$/ || super
     end
 
     def self.method_missing sym, *args, &block
-      sym.to_s =~ /([a-z]+\??=?)(!?)$/
+      sym.to_s =~ /^([A-Za-z]+\??=?)(!?)$/
 
       unless ($~.nil?)
         hash = args.first.to_h rescue {}
-        hash[:save] = !$2.blank?
+        hash[:save] ||= !$2.blank?
         return builders.flat_map(&:get_all_builders).find{|b| b.sym == $1.to_sym}.execute hash, &block
       end
 
