@@ -10,5 +10,15 @@ gemspec
 # Git. Remember to move these dependencies to your gemspec before releasing
 # your gem to rubygems.org.
 
-# To use debugger
-# gem 'debugger'
+
+gem 'pg'
+
+group :developmen do
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'pry-byebug' unless Gem.win_platform?
+  gem 'pry-stack_explorer'
+
+  # To use debugger
+  #gem 'debugger'
+end

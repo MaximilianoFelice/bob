@@ -1,4 +1,4 @@
-require 'math'
+require 'bob/math'
 
 class Meta_Builder
   attr_reader :sym, :behaviour
@@ -69,3 +69,4 @@ class Meta_Builder
       (res.length > 1)? res : res.first
     end
   end
+end

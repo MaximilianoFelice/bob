@@ -1,4 +1,4 @@
-require 'math'
+require 'bob/math'
 
 class Builder
   def self.builders
@@ -28,7 +28,7 @@ class Builder
   end
 
   private
-  
+
     def self.rnd_list builder, distinct: false, min: 0, max: 25
       res = Array.new(Math.triangleRandom(min: min, max: 25).round){builder[]}
       res.to_set.to_a if distinct
