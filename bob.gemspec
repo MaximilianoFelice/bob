@@ -5,7 +5,7 @@ require "bob/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "bob-rails"
+  s.name        = "bob-builder"
   s.version     = Bob::VERSION
   s.authors     = ["Maximiliano Felice"]
   s.email       = ["maximilianofelice@gmail.com"]
