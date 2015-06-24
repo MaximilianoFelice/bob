@@ -37,4 +37,11 @@ class MetaBuildTest < ActiveSupport::TestCase
     assert custom_user.valid?, msg: "User is not valid"
     assert custom_user.persisted?, msg: "User hasn't been persisted"
   end
+
+  test "random quantities to builders" do
+    random_user = UserBuilder.randomUser!
+
+    assert random_user.items.any?
+    assert_operator random_user.items.to_a.count, :<=,  5
+  end
 end

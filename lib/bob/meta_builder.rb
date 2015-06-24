@@ -11,10 +11,10 @@ class Meta_Builder
 
   def initialize sym, options, &builder
     @sym = sym
-    @behaviour = generate_behaviour builder, options[:klass]
     @rnd_qty = options[:rnd_qty] || false
-    @min_qty = options[:min_qty] || 0
+    @min_qty = options[:min_qty] || options[:min] || 0
     @max_qty = options[:qty]
+    @behaviour = generate_behaviour builder, options[:klass]
   end
 
   # => WARNING: For easy handling, this is a really coupled solution: It depends on argument names #
@@ -50,17 +50,16 @@ class Meta_Builder
           
           params = builder.parameters
 
-          builder.call(*with, *([instance].compact), *build_params(args, params))
-          instance.save! if klass && save
+          args[:log_with].call("Instantiating #{klass.name}") if (klass && log)
 
-          args[:log_with].call("Instantiated #{klass.name}") if (klass && log && !save)
-          args[:log_with].call("Created #{klass.name} ##{instance.id}") if (klass && log && save)
+          builder.call(*with, *([instance].compact), *build_params(args, params))
 
           args[:with] << instance
           (@after_callbacks || []).each{|cb| cb.execute args.except(:qty) }
           args[:with].delete(instance)
 
           instance.save! if klass && save
+          args[:log_with].call("Created #{klass.name} ##{instance.id}") if (klass && log && save)
 
           instance
         end
