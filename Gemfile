@@ -13,7 +13,9 @@ gemspec
 
 gem 'pg'
 
-gem 'coveralls', require: false
+group :test do
+  gem "codeclimate-test-reporter", require: nil
+end
 
 group :development, :test do
   gem 'pry'
