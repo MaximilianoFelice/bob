@@ -4,6 +4,10 @@ rvm:
   - ruby-head
 addons:
   postgresql: "9.4"
+before_install:
+  - gem install bundler
+  - "rm ${BUNDLE_GEMFILE}.lock"
 before_script:
+  - bundle update
   - cp test/dummy/config/database.yml.travis test/dummy/config/database.yml
   - "cd test/dummy && bundle exec rake db:test:prepare"
