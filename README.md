@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/MaximilianoFelice/bob.svg?branch=master)](https://travis-ci.org/MaximilianoFelice/bob)
 [![Code Climate](https://codeclimate.com/github/MaximilianoFelice/bob/badges/gpa.svg)](https://codeclimate.com/github/MaximilianoFelice/bob)
 [![Test Coverage](https://codeclimate.com/github/MaximilianoFelice/bob/badges/coverage.svg)](https://codeclimate.com/github/MaximilianoFelice/bob/coverage)
+[![Gem Version](https://badge.fury.io/rb/bob-builder.svg)](http://badge.fury.io/rb/bob-builder)
 
 ## Overview
 
