@@ -1,7 +1,9 @@
 language: ruby
 rvm: 
   - 2.1.0
+  - ruby-head
 addons:
   postgresql: "9.4"
 before_script:
   - cp test/dummy/config/database.yml.travis test/dummy/config/database.yml
+  - bundle exec rake db:create db:migrate
