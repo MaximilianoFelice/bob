@@ -13,6 +13,8 @@ gemspec
 
 gem 'pg'
 
+gem 'coveralls', require: false
+
 group :development, :test do
   gem 'pry'
   gem 'pry-rails'
