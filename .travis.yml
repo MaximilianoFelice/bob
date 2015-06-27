@@ -6,4 +6,4 @@ addons:
   postgresql: "9.4"
 before_script:
   - cp test/dummy/config/database.yml.travis test/dummy/config/database.yml
-  - "cd test/dummy && bundle exec rake db:create db:migrate"
+  - "cd test/dummy && rake db:create db:migrate"
