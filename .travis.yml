@@ -10,4 +10,4 @@ before_install:
 before_script:
   - bundle update
   - cp test/dummy/config/database.yml.travis test/dummy/config/database.yml
-  - "cd test/dummy && bundle exec rake db:test:prepare"
+  - "cd test/dummy && bundle exec rake db:test:prepare && cd ../.."
