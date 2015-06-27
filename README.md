@@ -1,5 +1,7 @@
 # BoB: Betting on Builders! (Beta)
 
+[![Build Status](https://travis-ci.org/MaximilianoFelice/bob.svg?branch=master)](https://travis-ci.org/MaximilianoFelice/bob)
+
 ## Overview
 
 Bob is a Builder tool which helps you build *as complex as you want* instances for your Rails applications. 
