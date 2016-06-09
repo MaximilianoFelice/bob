@@ -44,4 +44,11 @@ class MetaBuildTest < ActiveSupport::TestCase
     assert random_user.items.any?
     assert_operator random_user.items.to_a.count, :<=,  5
   end
+
+  test "named user params" do
+    random_user = UserBuilder.namedUser! name: "foo", email: "bar@foobar.com"
+
+    assert_equal random_user.name, 'foo', msg: "Failed user name assertion"
+    assert_equal random_user.email, 'bar@foobar.com', msg: "Failed user name assertion"
+  end
 end

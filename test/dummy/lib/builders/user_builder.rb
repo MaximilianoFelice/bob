@@ -5,6 +5,12 @@ class UserBuilder < Bob::Builder
     user.items << Item.create!
   end
 
+  meta_build :namedUser, User do |user, name, email|
+    user.name = name
+    user.email = email
+    user.items << Item.create!
+  end
+
   meta_build :customUser, User do |user, save, params|
     user.name = params[:name]
     user.email = params[:email]
